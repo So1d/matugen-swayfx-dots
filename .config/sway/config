@@ -18,6 +18,7 @@ include ~/.config/sway/config.d/*
     bindsym $mod+x exec $term -t btop -e btop
     bindsym $mod+s exec simplenote
     bindsym $mod+Shift+l exec $screenlock
+    bindsym $mod+z exec $browser
 
 
     # Drag floating windows by holding down $mod and left mouse button.

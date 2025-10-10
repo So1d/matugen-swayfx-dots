@@ -6,19 +6,19 @@ rolas lendarias
  https://github.com/lassekongo83/adw-colors/blob/main/HOWTO.md
 */
 
-@define-color window_bg_color #15140c;
-@define-color window_fg_color #e7e2d5;
-@define-color view_bg_color #15140c;
+@define-color window_bg_color #121318;
+@define-color window_fg_color #e3e1e9;
+@define-color view_bg_color #121318;
 @define-color view_fg_color @window_fg_color;
-@define-color accent_bg_color #d3c972;
-@define-color accent_fg_color #1f1c00;
+@define-color accent_bg_color #b9c3ff;
+@define-color accent_fg_color #09164b;
 @define-color accent_color @accent_bg_color;
 @define-color headerbar_bg_color @window_bg_color;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_border_color @window_bg_color;
 @define-color headerbar_shade_color @window_bg_color;
-@define-color card_bg_color #15140c;
+@define-color card_bg_color #121318;
 @define-color card_fg_color @window_fg_color;
 @define-color card_shade_color rgba(0, 0, 0, 0.07);
 @define-color popover_bg_color @window_bg_color;
@@ -36,15 +36,15 @@ rolas lendarias
 @define-color secondary_sidebar_border_color @window_bg_color;
 
 
-@define-color warning_bg_color #284e3c;
-@define-color warning_fg_color #c2ecd3;
-@define-color warning_color #a6d0b8;
+@define-color warning_bg_color #5c3c55;
+@define-color warning_fg_color #ffd7f2;
+@define-color warning_color #e5bad8;
 @define-color error_bg_color #93000a;
 @define-color error_fg_color #ffdad6;
 @define-color error_color #ffb4ab;
-@define-color success_bg_color #4b472b;
-@define-color success_fg_color #eae3bd;
-@define-color success_color #cec7a3;
+@define-color success_bg_color #434659;
+@define-color success_fg_color #dfe1f9;
+@define-color success_color #c3c5dd;
 @define-color destructive_bg_color #93000a;
 @define-color destructive_fg_color #ffdad6;
 @define-color destructive_color #ffb4ab;
