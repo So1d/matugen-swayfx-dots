@@ -1,0 +1,155 @@
+@import "/home/machado/.config/waybar/colors.css";
+
+/* --- Configurações Globais --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* --- Barra Principal --- */
+window#waybar {
+    background: @background;
+    color: @on_surface;
+    margin: 5px; /* Pequena margem para a barra "flutuar" como um todo */
+    border-radius: 0px; /* Cantos arredondados para a barra inteira */
+}
+
+/* --- Estilo dos Tooltips (dicas ao passar o mouse) --- */
+tooltip {
+    background: @surface_container_low;
+    border: 1px solid @outline;
+    border-radius: 8px;
+}
+tooltip label {
+    color: @on_surface;
+}
+
+/* --- Estilo "Pill" para Módulos --- */
+#custom-distro,
+#clock,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#custom-notification,
+#custom-scratchpad,
+#mpris,
+#backlight,
+#mode,
+#workspace,
+#window {
+    padding: 0 10px;
+    margin: 4px 3px; /* Margem vertical para centralizar, horizontal para espaçar */
+    border-radius: 4px;
+}
+
+/* --- Padrão de Cores para os Módulos --- */
+
+/* Grupo Primário (Foco principal) */
+#window,
+#mode {
+    background-color: @primary_container;
+    color: @on_primary_container;
+}
+
+/* Grupo Secundário (Informações do Sistema e Energia) */
+#clock,
+#cpu,
+#memory,
+#custom-notification,
+#custom-distro,
+#custom-scratchpad,
+#backlight,
+#battery {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+}
+
+/* Grupo Terciário (Conectividade) */
+#network,
+#bluetooth,
+#pulseaudio {
+    background-color: @tertiary_container;
+    color: @on_tertiary_container;
+}
+
+/* Grupo de Mídia (destacado) */
+
+#mpris {
+    background-color: @primary;
+    color: @on_secondary;
+}
+
+/* Módulos com Estilo Especial */
+#tray {
+    background-color: @secondary_container;
+}
+#window.empty {
+    background-color: transparent;
+}
+
+/* --- Workspaces (Estilo inalterado) --- */
+#workspaces button {
+    padding: 0 6px;
+    margin: 4px 3px;
+    border-radius: 4px;
+    color: @primary;
+    background-color: @secondary_container; /* Botões sem fundo por padrão */
+    transition: background-color 0.3s ease; /* Transição apenas no fundo para evitar flash */
+}
+
+#workspaces button:hover {
+    background-color: @surface_container_highest;
+}
+
+#workspaces button.focused {
+    background-color: @primary;
+    color: @surface_container;
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+}
+
+/* --- Estados dos Módulos --- */
+/* A cor do texto ainda mudará com base no estado para feedback rápido */
+#battery.charging,
+#battery.plugged {
+    color: @primary; /* Cor amarela para contrastar com o novo fundo escuro */
+}
+
+#battery.warning:not(.charging) {
+    color: @on_error_container;
+}
+
+#battery.critical:not(.charging) {
+    color: @on_error; /* Fundo especial para estado crítico */
+}
+
+#network.disconnected,
+#network.disabled {
+    color: @on_error;
+}
+
+#bluetooth.disabled,
+#pulseaudio.muted,
+#bluetooth.off {
+    color: @outline;
+    background-color: @surface_container_highest;
+}
+
+#bluetooth.connected {
+    color: @tertiary; /* A cor do ícone ainda pode mudar para indicar conexão */
+}
+#clock.calendar {
+    border-radius: 4;
+}

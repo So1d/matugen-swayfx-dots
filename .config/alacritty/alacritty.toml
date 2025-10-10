@@ -1,0 +1,9 @@
+general.import = ["colors.toml"]
+[terminal.shell]
+program = "fish"
+[font]
+normal.family = "CaskaydiaCove Nerd Font"
+
+[window]
+opacity = 0.55     # valor entre 0.0 (totalmente transparente) e 1.0 (opaço)
+decorations = "none" # opcional: para remover bordas e cabeçalho

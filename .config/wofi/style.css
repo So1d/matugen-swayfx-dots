@@ -1,0 +1,59 @@
+@import "/home/machado/.config/waybar/colors.css";
+* {
+    border-radius: 8px;
+}
+window {
+    margin: 0px;
+    background-color: @background;
+    border-radius: 0px;
+    border: 3px solid @primary;
+    color: @on_surface;
+    font-family: "Monofur Nerd Font";
+    font-size: 15px;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 8px;
+    color: @secondary; /* Cor de destaque para o texto do input */
+    background-color: @surface_container;
+}
+
+#inner-box {
+    margin: 5px;
+    background-color: @surface_container;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 15px;
+    border-radius: 8px;
+    background-color: @background;
+}
+
+#scroll {
+    margin: 0px;
+
+    border-radius: 8px;
+}
+
+#text {
+    margin: 5px;
+    border-radius: 8px;
+    color: @on_surface;
+}
+
+#entry:selected {
+    background-color: @primary;
+    color: @on_primary; /* Cor correta para texto sobre o fundo primário */
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Redundante se a regra acima funcionar, mas mantido por segurança */
+#entry:selected * {
+    background-color: @primary;
+    color: @on_primary;
+    border-radius: 8px;
+    outline: none;
+}

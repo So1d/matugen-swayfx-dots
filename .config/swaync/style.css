@@ -1,0 +1,129 @@
+@import "/home/machado/.config/waybar/colors.css";
+
+/* Base */
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    font-size: 13px;
+}
+window.floating-notifications {
+    background: @background;
+    border-radius: 8px;
+    border: 1px solid @primary;
+    margin: 15px; /* Margem da janela em relação à borda da tela */
+}
+/* Linha da notificação (foco/hover como “realce” da ilha) */
+.notification-row {
+    outline: none;
+    margin: 10px;
+    padding: 0;
+    background: transparent;
+    border-radius: 4px;
+}
+.notification-row:hover,
+.notification-row:focus {
+    background: @surface_container_low;
+}
+
+/* Cartão da notificação */
+.notification {
+    background-color: transparent;
+    color: @on_surface;
+    border-radius: 4px;
+    padding: 10px;
+    border: 0px solid @primary;
+}
+
+/* Conteúdo interno */
+.notification-content {
+    background: transparent;
+    padding: 10px;
+}
+
+/* Título e corpo (escopados para evitar conflito global) */
+.notification .title {
+    color: @primary;
+    font-size: 16px;
+}
+.notification .body {
+    color: @on_surface;
+    font-size: 14px;
+}
+
+/* Control Center como “ilha” */
+.control-center {
+    background-color: @background;
+    color: @on_surface;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid @primary;
+    margin-bottom: 2px;
+}
+
+/* Botões do Control Center */
+.control-center .control-center-button {
+    background-color: @background;
+    color: @on_secondary_container;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.control-center .control-center-button:hover {
+    background-color: @primary;
+}
+/* Estado ativo para toggles */
+.control-center .control-center-button.toggle:checked {
+    background-color: @tertiary;
+    color: @tertiary;
+}
+
+/* Cabeçalho e botão de fechar de grupos */
+.notification-group-header {
+    color: @tertiary;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.notification-group-close-button {
+    background-color: @error_container;
+    color: @on_error_container;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 5px;
+}
+.notification-group-close-button:hover {
+    background-color: @error;
+    color: @on_error;
+}
+/* ~/.config/swaync/style.css */
+
+/* --- Estilo para Notificações com Barra de Progresso (OSD) --- */
+.notification.progressbar {
+    background: alpha(@surface_container_low, 0.85);
+    border: 2px solid @primary;
+    border-radius: 4px; /* Efeito pílula */
+    padding: 12px;
+}
+
+.notification.progressbar .notification-content {
+    padding: 0;
+}
+
+/* Esconde o texto do corpo da notificação, se houver */
+.notification.progressbar .body {
+    font-size: 0;
+}
+
+/* A barra de progresso em si */
+.notification.progressbar .progressbar {
+    min-height: 12px;
+    border-radius: 4px;
+    background-color: alpha(@on_surface_variant, 0.3); /* Fundo da barra */
+}
+
+.notification.progressbar .progressbar progress {
+    min-height: 12px;
+    border-radius: 4px;
+    background-image: none;
+    background-color: @primary; /* Cor da barra preenchida */
+}

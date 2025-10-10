@@ -1,0 +1,61 @@
+[config]
+# Base directory for output, will be created if it doesn't exist
+output_dir = "~/.local/share/matugen"
+
+# Available systems: material3, breeze
+system = "material3"
+
+# If true, this will use the pre-generated cached colors if available
+# If true, matugen will output diagnostics for templates
+verbose = true
+
+# Available schemes: Tonal Spot (default), Vibrant, Expressive, Fruit Salad, Rainbow, Content
+scheme = "Content"
+
+# Available schemes: dark (default), light
+variant = "dark"
+
+# If true, this will extract colors from the source image. If false, it will extract from the overall image.
+extract_from_source = true
+
+# Templates section - define your output templates here
+[templates.waybar]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/waybar/colors.css"
+#post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/colors.toml'
+
+[templates.wofi]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = '~/.config/wofi/colors.css'
+
+
+[templates.sway]
+input_path = "~/.config/matugen/templates/sway-colors.conf"
+output_path = '~/.config/sway/config.d/colors.conf'
+post_hook='swaymsg reload'
+
+
+[templates.gtk3]
+input_path = "/home/machado/.config/matugen/templates/gtk-colors.css"
+output_path = '~/.config/gtk-3.0/colors.css'
+
+
+[templates.gtk4]
+input_path = "/home/machado/.config/matugen/templates/gtk-colors.css"
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.fuzzel]
+input_path = '/home/machado/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/colors.ini'
+
+[templates.swaylock]
+input_path = "~/.config/matugen/templates/swaylock"
+output_path = "~/.config/swaylock/swaylock.conf"
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'

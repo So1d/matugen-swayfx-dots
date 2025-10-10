@@ -1,0 +1,7 @@
+/* Gerado com Matugen */
+<* for name, value in colors *>
+    @define-color {{name}} {{value.dark.hex}};
+<* endfor *>
+
+/* Sobrescrita para background com 60% de opacidade */
+@define-color background rgba({{colors.background.dark.red}}, {{colors.background.dark.green}}, {{colors.background.dark.blue}}, 0.6);
