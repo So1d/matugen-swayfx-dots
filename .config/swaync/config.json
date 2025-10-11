@@ -16,6 +16,7 @@
   "control-center-width": 350,
   "control-center-height": 350,
   "notification-window-width": 300,
+  "notification-window-margin": 0,
   "layer-shell": true,
   "layer": "overlay",
   "keyboard-shortcuts": true,

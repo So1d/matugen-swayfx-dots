@@ -6,13 +6,7 @@
     font-weight: bold;
     font-size: 13px;
 }
-window.floating-notifications {
-    background: @background;
-    border-radius: 8px;
-    border: 1px solid @primary;
-    margin: 15px; /* Margem da janela em relação à borda da tela */
-}
-/* Linha da notificação (foco/hover como “realce” da ilha) */
+
 .notification-row {
     outline: none;
     margin: 10px;
@@ -22,16 +16,16 @@ window.floating-notifications {
 }
 .notification-row:hover,
 .notification-row:focus {
-    background: @surface_container_low;
+    background: @background;
 }
 
 /* Cartão da notificação */
 .notification {
-    background-color: transparent;
+    background-color: @surface_container;
     color: @on_surface;
     border-radius: 4px;
     padding: 10px;
-    border: 0px solid @primary;
+    border: 1px solid @primary;
 }
 
 /* Conteúdo interno */
@@ -49,7 +43,6 @@ window.floating-notifications {
     color: @on_surface;
     font-size: 14px;
 }
-
 /* Control Center como “ilha” */
 .control-center {
     background-color: @background;

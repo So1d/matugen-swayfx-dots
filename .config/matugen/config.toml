@@ -9,13 +9,8 @@ system = "material3"
 # If true, matugen will output diagnostics for templates
 verbose = true
 
-# Available schemes: Tonal Spot (default), Vibrant, Expressive, Fruit Salad, Rainbow, Content
-scheme = "Content"
+mode = "dark"
 
-# Available schemes: dark (default), light
-variant = "dark"
-
-# If true, this will extract colors from the source image. If false, it will extract from the overall image.
 extract_from_source = true
 
 # Templates section - define your output templates here

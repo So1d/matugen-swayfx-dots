@@ -23,7 +23,7 @@ window#waybar {
 tooltip {
     background: @surface_container_low;
     border: 1px solid @outline;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 tooltip label {
     color: @on_surface;
@@ -77,15 +77,16 @@ tooltip label {
 #network,
 #bluetooth,
 #pulseaudio {
-    background-color: @tertiary_container;
-    color: @on_tertiary_container;
+    background-color: @on_secondary;
+    color: @primary;
+    border: 1px solid @on_secondary;
 }
 
 /* Grupo de Mídia (destacado) */
 
 #mpris {
     background-color: @primary;
-    color: @on_secondary;
+    color: @on_tertiary;
 }
 
 /* Módulos com Estilo Especial */

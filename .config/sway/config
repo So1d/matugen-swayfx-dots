@@ -157,3 +157,4 @@ bindsym --no-warn XF86AudioPrev exec playerctl -d previous
 
 # Atualizar wallpaper com Matugen
 bindsym $mod+w exec "~/.config/sway/scripts/update-wall.sh"
+bindsym $mod+Shift+w exec "~/.config/sway/scripts/update-wall-type.sh"
