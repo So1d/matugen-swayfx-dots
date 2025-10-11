@@ -68,18 +68,12 @@ tooltip label {
 #custom-distro,
 #custom-scratchpad,
 #backlight,
+#network,
+#bluetooth,
+#pulseaudio,
 #battery {
     background-color: @secondary_container;
     color: @on_secondary_container;
-}
-
-/* Grupo Terciário (Conectividade) */
-#network,
-#bluetooth,
-#pulseaudio {
-    background-color: @on_secondary;
-    color: @primary;
-    border: 1px solid @on_secondary;
 }
 
 /* Grupo de Mídia (destacado) */

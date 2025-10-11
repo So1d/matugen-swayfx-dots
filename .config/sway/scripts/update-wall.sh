@@ -39,7 +39,7 @@ SELECTION="$WALLPAPER_DIR/$SELECTED_BASENAME"
 cp "$SELECTION" "$WALL_COPY"
 matugen image "$WALL_COPY"
 swww img "$SELECTION" \
---transition-type center \
+--transition-type any \
 --transition-step 15 \
 --transition-fps 60
 

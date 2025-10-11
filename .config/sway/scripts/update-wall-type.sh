@@ -56,7 +56,7 @@ fi
 
 
 swww img "$SELECTION" \
---transition-type center \
+--transition-type any \
 --transition-step 15 \
 --transition-fps 60
 
